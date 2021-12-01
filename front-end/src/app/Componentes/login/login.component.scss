@@ -1,0 +1,102 @@
+#contenedor{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    height: 730px;
+}
+
+#cuadro{
+    width: 520px;
+    height: 480px;
+    margin-top: 100px;
+
+    background-color: rgb(219, 219, 219);
+    border: solid 1px red;
+    border-radius: 20px;
+    padding: 20px;
+    //justify-content: center;
+}
+
+#items{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dInput{
+    height: 50px;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 8px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dInput input{
+    border: none;
+    height: 35px;
+    font-size: 20px;
+}
+
+button{
+    font-size: 20px;
+    margin: 10px;
+    width: 320px;
+    height: 50px;
+    background-color: rgb(47, 172, 255);
+    color: white;
+    border-radius: 8px;
+    border: solid 1px gray;
+}
+
+button:hover{
+    background-color: rgb(96, 186, 246);
+    font-weight: bolder;
+}
+
+#rememberMe{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -4px;
+    right: 5px;
+}
+
+#chBox{
+    margin-left: 14px;
+    font-size: 14px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#chBox label{
+    margin-left: 5px;
+} 
+
+#chBox a{
+    margin-left: 55px;
+    text-align: right;
+}
+
+mat-icon{
+    margin: 10px;
+}
+
+#aBottom{
+    margin-top: 50px;
+    color: black;
+    text-align: center;
+}
+
+#aBottom span{
+    color: black;
+    font-weight: bolder;
+}
+
+.font{
+    color: #000;
+    text-decoration-line: underline;
+}

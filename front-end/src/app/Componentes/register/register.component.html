@@ -1,0 +1,56 @@
+<div id="contenedor">
+    <ul>
+        <li>
+            <div id="cuadro">
+                <form id="formulario" [formGroup]="formulario" (ngSubmit)="validarSubmit()" novalidate>
+                    <div id="items" class="row">
+                        <div class="dInput col-8">
+                            <mat-icon aria-hidden="false" aria-label="Example person icon">person</mat-icon>
+                            <input type="text" class="form-control" id="username" formControlName="username" placeholder="Username" required>
+                        </div>
+                        <div class="dInput col-8">
+                            <mat-icon aria-hidden="false" aria-label="Example mail icon">mail</mat-icon>
+                            <input type="email" class="form-control" id="email" formControlName="email" placeholder="Email" required>
+                        </div>
+                        <div class="dInput col-8">
+                            <mat-icon aria-hidden="false" aria-label="Example lock icon">lock</mat-icon>
+                            <input type="password" class="form-control" id="password" formControlName="password" placeholder="Password" required>
+                        </div>
+                        <div class="col-8" id="radios">
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label" id="perfil">Profile Type:</label>
+                                <div class="divRadios">
+                                    <input type="radio" class="btn-check" id="publico" name="tipoPerfil" formControlName="tipoPerfil" value="0" checked >
+                                    <label class="btn btn-outline-dark" for="publico" placement="top" ngbTooltip="{{tooltip.publico}}"> Regular </label>
+                                </div>
+                                <div class="divRadios">
+                                    <input type="radio" class="btn-check" id="artista" name="tipoPerfil" formControlName="tipoPerfil" value="1" >
+                                    <label class="btn btn-outline-dark" for="artista" placement="top" ngbTooltip="{{tooltip.artista}}"> Artist </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8" id="tyc">
+                            <button type="button" id="terminos">Terms & Conditions</button>
+                        </div>
+                            <button type="submit" [disabled]="formulario.invalid">REGISTER</button>
+                        <div id="aBottom">
+                            <a class="font" href="login">Already have an account? <span> Sign in</span></a>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+        </li>
+        <li class="msjs">
+            <div class="alert alert-danger" id="alertEmail" *ngIf="flagEmail == false"> 
+                {{msj.e_email}}
+            </div>
+            <div class="alert alert-danger" id="alertUsername" *ngIf="flagUser == false">
+                {{msj.e_username}}
+            </div>
+            <div class="alert alert-success" id="alertSuccess" *ngIf="success == true">
+                {{msj.success}}
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,155 @@
+#contenedor{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    height: 780px;
+}
+
+#cuadro{
+    width: 520px;
+    height: 583px;
+    margin-top: 70px;
+    background-color: rgb(219, 219, 219);
+    border: solid 1px red;
+    border-radius: 20px;
+    padding: 20px;
+    //justify-content: center;
+}
+
+#tyc{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline rgb(238, 93, 26);
+}
+
+#artista{
+    margin-left: 10px;
+}
+
+#tyc button{
+    width: auto;
+    height: auto;
+    background-color: inherit;
+    border: none;
+    color: rgb(238, 93, 26);
+    font-size: 15px;
+    margin-bottom: auto;
+}
+
+#items{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dInput{
+    height: 50px;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 8px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.dInput input{
+    border: none;
+    height: 35px;
+    font-size: 20px;
+}
+
+#perfil{
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+#radios{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#radios label{
+    font-size: 18px;
+}
+
+.divRadios{
+    margin-left: 10px;
+}
+
+.radioC{
+    margin-left: 10px;
+}
+
+#publico{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+#artista{
+    font-size: 20px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 20px;
+    height: 20px;
+    border: solid 1px rgb(82, 82, 82);
+}
+
+button{
+    font-size: 20px;
+    margin: 10px;
+    width: 320px;
+    height: 50px;
+    background-color: rgb(47, 172, 255);
+    color: white;
+    border-radius: 8px;
+    border: solid 1px gray;
+}
+
+button:hover{
+    background-color: rgb(96, 186, 246);
+    font-weight: bolder;
+}
+
+#rememberMe{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -4px;
+    right: 5px;
+}
+
+mat-icon{
+    margin: 10px;
+}
+
+#aBottom{
+    margin-top: 50px;
+    color: black;
+    text-align: center;
+}
+
+#aBottom span{
+    color: black;
+    font-weight: bolder;
+}
+
+.font{
+    color: #000;
+    text-decoration-line: underline;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.msjs{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}

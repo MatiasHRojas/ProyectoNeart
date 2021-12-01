@@ -1,0 +1,38 @@
+<div id="contenedor" class="row">
+    <div *ngIf="ID != -1" id="seccionNoticias" class="row">
+        <div id="imagenNoticia">
+            <img src="../../../assets/img-noticias/{{noticia.imgNoticia}}" alt="imagen principal noticia">
+        </div>
+    
+        <div id="cuerpoNoticia" >
+            <h2>{{noticia.titulo}}</h2>
+            <hr>
+            <h4>{{noticia.bajada}}</h4>
+            <hr>
+            <p>{{noticia.contenido}}</p>
+        </div>
+
+        <div class="dt1">
+            <div id="lineaVertical"></div>
+            <div id="eventos" *ngIf="Noticias">   
+                <div class="lineaHorizontal"></div>
+                <ul>
+                    <li *ngFor="let noticia of Noticias" class="banner">
+                        <a class="divImgBanner" href="news/{{noticia.id}}">
+                            <img src="../../../assets/img-noticias/{{noticia.imgBanner}}">
+                        </a>
+                        <div class="bannerP">
+                            <h3 class="BannerT">{{noticia.titulo}}</h3>
+                            <p class="BannerB">{{noticia.bajada}}</p>
+                        </div>
+                        <div class="lineaHorizontal"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="ID == -1" style="height: 200px; line-height: 200px;">
+        <!-- CAMBIAR ESTO -->
+        <p> no existe la noticiaaa </p>
+    </div>
+</div>

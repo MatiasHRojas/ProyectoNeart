@@ -1,0 +1,51 @@
+#nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 90px 10px 90px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    z-index: 5;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0px;
+    height: 50px;
+}
+
+.boton{
+    width: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.boton button{
+    font-size: 30px;
+    background-color: white;
+    border: none;
+}
+
+.boton button:hover{
+    font-size: 31px;
+    color: rgb(99, 99, 99);
+}
+
+.btn.btn-light:active, .btn.btn-light:focus{
+    font-size: 31px;
+    background-color: rgb(255, 255, 255) !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+
+.boton img{
+    position: relative;
+    top: -12px;
+    width: 120px;
+}

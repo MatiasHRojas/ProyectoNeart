@@ -1,0 +1,71 @@
+<div id="contenedor">
+    <div id="nav">
+        <ul id="cont">
+            <li>
+                <div class="boton">
+                    <button ngbNavLink [routerLink]="['/']" routerLinkActive="router-link-active" class="btn btn-light" #home>Home</button>
+                    <img src="../../../assets//linea2.png" alt="linea" *ngIf="a">
+                </div>
+            </li>
+            <li>
+                <div class="boton">
+                    <button ngbNavLink [routerLink]="['/']" routerLinkActive="router-link-active"class="btn btn-light" #artist>Artists</button>
+                    <img src="../../../assets//linea2.png" alt="linea" *ngIf="b">
+                </div>
+            </li>
+            <li>
+                <div class="boton">
+                    <button ngbNavLink [routerLink]="['/']" routerLinkActive="router-link-active"class="btn btn-light" #news>News</button>
+                    <img src="../../../assets//linea2.png" alt="linea" *ngIf="c">
+                </div>
+            </li>
+            <li>
+                <div class="boton">
+                    <button ngbNavLink [routerLink]="['/']" routerLinkActive="router-link-active"class="btn btn-light" #team>Team</button>
+                    <img src="../../../assets//linea2.png" alt="linea" *ngIf="d">
+                </div>
+            </li>
+            <li>
+                <div class="boton">
+                    <button ngbNavLink [routerLink]="['/']" routerLinkActive="router-link-active"class="btn btn-light" #about>About</button>
+                    <img src="../../../assets//linea2.png" alt="linea" *ngIf="e">
+                </div>
+            </li>
+        </ul>
+        <div *ngIf="logged == false"> 
+            <ul id="login">
+                <li>
+                    <div class="boton">
+                        <button ngbNavLink [routerLink]="['/login']" routerLinkActive="router-link-active" class="btn btn-light" (click)="activarBotones('login')" #login>Log in</button>
+                        <img src="../../../assets//linea2.png" alt="linea" *ngIf="f">
+                    </div>
+                </li>
+                <li>
+                    <div class="boton">
+                        <button ngbNavLink [routerLink]="['/register']" routerLinkActive="router-link-active" class="btn btn-light" (click)="activarBotones('register')" #register>Register</button>
+                        <img src="../../../assets//linea2.png" alt="linea" *ngIf="g">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="logged == true">
+            <ul id="login">
+                <li>
+                    <div class="boton">
+                        <button ngbNavLink [routerLink]="['/artist',session.name]" routerLinkActive="router-link-active" class="btn btn-light" (click)="activarBotones('profile')" #profile>Profile</button>
+                        <img src="../../../assets//linea2.png" alt="linea" *ngIf="h">
+                    </div>
+                </li>
+                <li>
+                    <div class="boton">
+                        <button class="btn btn-light" (click)="loggingOut()" #off>Log out</button>
+                        <img src="../../../assets//linea2.png" alt="linea" *ngIf="i">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+

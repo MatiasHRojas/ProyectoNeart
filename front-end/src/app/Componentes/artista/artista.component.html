@@ -1,0 +1,130 @@
+<div id="contenedor" class="row" *ngIf="flag == 1">
+    <div class="col-5 dt1">
+        <ul>
+            <li id="titulo">
+                <h2>Gallery</h2>
+            </li>
+            <li>
+                <div class="dt1">
+                    <img id="imgPerfil" src="" alt="imagen perfil">
+                    <form id="editimgsection" (ngSubmit)="editarImgPerfil()">
+                        <div *ngIf="editar == true" class="btn btn-primary btn-file"><input type="file" id="filePerfil" (input)="submitProfileImg = true" accept="image/*" ></div>
+                        <button id="btnImgEdit" *ngIf="submitProfileImg == true" type="submit">+</button>
+                    </form>
+                </div>
+            </li>
+            <li *ngIf="artista" id="datosArtista">
+                <div *ngIf="artista">
+                    <input type="text" id="nombrePerfil" value="{{artista.nombre}}" [disabled]="!editar">
+                </div>
+            </li>
+            <li>
+                <div class="dt1">
+                    <button id="editar" (click)="editar = true" *ngIf="editar == false && perfil" [disabled]="botonActivo">
+                        Editar tu Perfil
+                        <mat-icon aria-hidden="false" aria-label="Example edit icon">edit</mat-icon>
+                    </button>
+                    <button id="terminar" (click)="editar = false; guardarCambios()" *ngIf="editar == true">
+                        Guardar y Ver Cambios
+                        <mat-icon aria-hidden="false" aria-label="Example edit icon">save</mat-icon>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="dt1">
+                    <div id="descripcion">
+                        <textarea id="descripcionPerfil" value="{{artista.descripcion}}" [disabled]="!editar" *ngIf="artista"></textarea>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-7 dt1">
+        <div id="gallery">
+            <ul id="fotoss">
+                <li id="li1" >
+                    <div class="posicion" *ngIf="editar">1</div>
+                </li>
+                <li id="li2" >
+                    <div class="posicion" *ngIf="editar">2</div>
+                </li>
+                <li id="li3" >
+                    <div class="posicion" *ngIf="editar">3</div>
+                </li>
+                <li id="li4" >
+                    <div class="posicion" *ngIf="editar">4</div>
+                </li>
+                <li id="li5" >
+                    <div class="posicion" *ngIf="editar">5</div>
+                </li>
+                <li id="li6" >
+                    <div class="posicion" *ngIf="editar">6</div>
+                </li>
+                <li id="li7" >
+                    <div class="posicion" *ngIf="editar">7</div>
+                </li>
+                <li id="li8" >
+                    <div class="posicion" *ngIf="editar">8</div>
+                </li>
+                <li id="li9" >
+                    <div class="posicion" *ngIf="editar">9</div>
+                </li>
+            </ul>
+            <div style="margin-top: 10px;" *ngIf="editar == true">
+                <form id="agregarFotos" [formGroup]="agregarFotos" (ngSubmit)="agregar()" novalidate>
+                    <ul style="list-style-type: none; padding: 0px; display: flex; justify-content: center;">
+                        <li>
+                            <input type="file" accept="image/*" id="file" class="form-control" aria-label="file example" style="width: 400px;" required formControlName="file">
+                        </li>
+                        <li>
+                            <input type="number" maxlength="1" min="0" max="9" id="posicion" style="height: 37px;" placeholder="Posición" required formControlName="posicion"> 
+                        </li>
+                        <button type="submit" id="btn" [disabled]="!agregarFotos.valid" style="width: 110px; background-color: rgb(106, 221, 77); font-weight: 600;">Subir Imagen</button>
+                    </ul>
+                </form>
+
+                <form id="eliminarFotos" [formGroup]="eliminarFotos" style="display: flex; justify-content: center;" (ngSubmit)="eliminar()" novalidate>
+                    <div>
+                        <label id="lblEliminar" style="margin-right: 20px; font-size: 18px;">Eliminar Imagen: </label>
+                        <input type="number" id="posEliminar" maxlength="1" min="0" max="9" style="height: 37px; margin-right: 20px;" placeholder="Posición" required formControlName="posEliminar"> 
+                    </div>
+                    <button type="submit" id="btnEliminar" [disabled]="!eliminarFotos.valid" style="width: 160px; background-color: rgb(230, 90, 47); font-weight: 600;">Eliminar Imagen</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="activarPerfilRegular && flag == 0" id="perfilRegular">
+    <div>
+        <ul id="mensajeBienvenida">
+            <li><h2>BIENVENIDO A NEART <span> {{usuarioRegular.username}}</span>!</h2><br></li>
+            <li><p>¡Esperamos que disfrutes esta página!, próximamente habrá funcionalidades extra para ti. Por ahora puedes pasar y disfrutar mirando las obras de nuestros artistas.</p></li>
+        </ul>
+        <ul id="rrss">
+            <li>
+                <p>NUESTRAS REDES SOCIALES: </p>
+            </li>
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../../../assets/barra-lateral/fb.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../../../assets/barra-lateral/ig.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="../../../assets/barra-lateral/tw.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div *ngIf="flag == -1" id="usuarioNoExiste">
+    <div>
+        <p>El perfil actual NO corresponde al de un Artista</p>
+    </div>
+</div>

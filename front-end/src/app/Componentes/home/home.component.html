@@ -1,0 +1,145 @@
+<div id="space"></div>
+<div id="contenedor">
+    <div id="div-barraLateral">
+        <ul id="barraLateral">
+            <li>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../../../assets/barra-lateral/fb.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../../../assets/barra-lateral/ig.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="../../../assets/barra-lateral/tw.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- HOME -->
+    <div class="div-box col" id="home">
+        <div id="img1" class="col-5">
+            <img src="../../../assets/img-contenido/1.png" alt="divición">
+        </div>
+        <div id="contenido-home" class="col-7">
+            <h1>WELCOME TO <b>NEART</b></h1>
+            <p id="frase" #frase></p>
+            <div id="buscador" class="dInput">
+                <mat-icon aria-hidden="false" aria-label="Example search icon">search</mat-icon>
+                <form id="buscar" [formGroup]="formulario" (ngSubmit)="buscarArtista()" novalidate>
+                    <input id="typeahead-basic" type="text" class="form-control" [ngbTypeahead]="search" placeholder="Username" maxlength="25"/>
+                    <div id="Sbutton"><button id="Sbtn" type="submit">Buscar</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <img src="../../../assets/linea.png" class="linea" alt="divición">
+
+    <!-- ARTISTS -->
+    <div class="div-box" id="artist">
+        <div id="h2D"></div>
+        <h2>Our <b>Artists</b></h2>
+        <div id="carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div *ngFor="let primerArtist of primerArtista" class="row carousel-item active" data-bs-interval="3000" >
+                    <div class="col-5"><img src="{{primerArtist.img}}" class="img-carrusel" alt=""></div>
+                    <div class="col-6" id="info1">
+                        <h3>{{primerArtist.nombre}}</h3>
+                        <p>{{primerArtist.descripcion}}</p>
+                        <button class="btn btn-light btn-rm"  [routerLink]="['/artist', primerArtist.username]" routerLinkActive="router-link-active">
+                            Read more
+                        </button>
+                    </div>
+                </div>
+                <div *ngFor="let artista of artistas" class="row carousel-item" data-bs-interval="3000" >
+                    <div class="col-5"><img src="{{artista.img}}" class= "img-carrusel" alt=""></div>
+                    <div class="col-6" id="info1">
+                        <h3>{{artista.nombre}}</h3>
+                        <p>{{artista.descripcion}}</p>
+                        <button class="btn btn-light btn-rm" [routerLink]="['/artist', artista.username]" routerLinkActive="router-link-active" >
+                            Read more
+                        </button>
+                    </div>
+                </div>
+                <!--
+                <div class="row carousel-item active" data-bs-interval="10000">
+                    <div class="col-5"><img src="{{artistas[0].img}}" class=" img-carrusel" alt=""></div>
+                    <div class="col-6" id="info1">
+                        <h3>{{artistas[0].nombre}}</h3>
+                        <p>{{artistas[0].desc}}</p>
+                        <button class="btn btn-light btn-rm">Read more</button>
+                    </div>
+                </div>
+                
+                <div class="row carousel-item" data-bs-interval="10000">
+                    <div class="col-5"><img src="{{artistas[1].img}}" class=" img-carrusel" alt="..."></div>
+                    <div class="col-6" id="info2">
+                        <h3>{{artistas[1].nombre}}</h3>
+                        <p>{{artistas[1].desc}}</p>
+                        <button class="btn btn-light btn-rm">Read more</button>
+                    </div>
+                </div>
+
+                <div class="row carousel-item" data-bs-interval="10000">
+                    <div class="col-5"><img src="{{artistas[2].img}}" class=" img-carrusel" alt="..."></div>
+                    <div class="col-6" id="info3">
+                        <h3>{{artistas[2].nombre}}</h3>
+                        <p>{{artistas[2].desc}}</p>
+                        <button class="btn btn-light btn-rm">Read more</button>
+                    </div>
+                </div>
+
+                <div class="row carousel-item" data-bs-interval="10000">
+                    <div class="col-5"><img src="{{artistas[3].img}}" class=" img-carrusel" alt="..."></div>
+                    <div class="col-6" id="info3">
+                        <h3>{{artistas[3].nombre}}</h3>
+                        <p>{{artistas[3].desc}}</p>
+                        <button class="btn btn-light btn-rm">Read more</button>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
+    <img src="../../../assets/linea.png" class="linea" alt="divición">
+    
+    <!-- NEWS -->
+    <div class="div-box" id="news">
+        <h2><b>News</b></h2>
+        <div id="contenedor-noticias">
+            <ul>
+                <li *ngFor="let item of noticiasDestacadas">
+                    <div class="noticia">
+                        <img src="../../../assets/img-noticias/{{item.imgHome}}" alt="imagen de la noticia" class="cambiarPuntero" [routerLink]="['/news', item.id]" routerLinkActive="router-link-active" >
+                        <h4>{{item.titulo}}</h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <img src="../../../assets/linea.png" class="linea" alt="divición">
+    </div>
+    
+    <!-- TEAMWORK -->
+    <div class="div-box" id="team">
+        <h2><b>Teamwork</b></h2>
+        <ul>
+            <li *ngFor="let item of teamwork">
+                <img src="{{item.foto}}" alt="{{item.nombre}}">
+                <h4>{{item.nombre}}</h4>
+                <p>{{item.ocupacion}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

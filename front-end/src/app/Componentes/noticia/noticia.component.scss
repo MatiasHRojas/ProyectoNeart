@@ -1,0 +1,141 @@
+#contenedor{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 100px;
+    font-family: 'Outfit', sans-serif;
+    height: auto;
+}
+
+.dt1{
+    width: 520px;
+    display: flex;
+}
+
+#seccionNoticias{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#imagenNoticia{
+    width: 500px;
+    height: 650px;
+}
+
+#imagenNoticia img{
+    width: 450px;
+    height: 650px;
+}
+
+#cuerpoNoticia{
+    width: 450px;
+    height: 650px;
+    background-color: rgb(255, 255, 255);
+    margin-right: 40px;
+}
+
+#cuerpoNoticia h2{
+    font-size: 50px;
+    text-align: left;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: rgb(122, 122, 122);
+}
+
+#cuerpoNoticia h4{
+    margin-left: 5px;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    color: rgb(27, 27, 27);
+}
+
+#cuerpoNoticia p{
+    height: 520px;
+    text-indent: 20px;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    color: rgb(27, 27, 27);
+    overflow-y: auto;
+    overflow-x: auto;
+    padding-right: 10px;
+}
+
+#lineaVertical{
+    position: relative;
+    display: flex;
+    width: 5px;
+    height: 650px;
+    background-color: rgb(156, 156, 156);
+    margin-right: 10px;
+}
+
+.lineaHorizontal{
+    width: 420px;
+    height: 5px;
+    background-color: rgb(156, 156, 156);
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+#eventos{
+    width: 500px;
+    height: 650px;
+    background-color: rgb(255, 255, 255);
+    overflow-y: auto;
+    padding: 20px;
+    padding-left: 0px;
+}
+
+#eventos ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+#eventos li{
+    display: flex;
+    height: 180px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.divImgBanner{
+    width: 150px;
+    margin: 10px;
+}
+
+.divImgBanner img{
+    width: inherit;
+}
+
+.divImgBanner img:hover{
+    cursor: pointer;
+}
+
+.banner{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bannerP{
+    width: 230px;
+    height: 160px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.bannerP h3{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+}
+
+.bannerP p{
+    font-size: 24px;
+}

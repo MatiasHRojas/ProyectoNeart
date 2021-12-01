@@ -1,0 +1,333 @@
+#contenedor{
+    height: 1000px;
+    background-color: rgb(255, 255, 255);
+    padding: 100px;
+    font-family: 'Outfit', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#titulo h2{
+    font-size: 40px;
+    font-weight:700;
+    color: rgb(197, 197, 197);
+    width: inherit;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.dt1{
+    display: flex;
+    justify-content: center;
+}
+
+#editImg{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 35px;
+    right: 25px;
+}
+
+#imgPerfil{
+    margin-top: 20px;
+    margin-left: 28px;
+    width: 350px;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+#datosArtista{
+    width: 350px;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+#datosArtista input{
+    font-size: 30px;
+    font-weight:500;
+    color: rgb(197, 197, 197);
+    width: inherit;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#datosArtista input:disabled{
+    border: none;
+    background-color: white;
+    color: rgb(175, 175, 175);
+}
+
+#editar{
+    margin-top: 20px;
+    width: 280px;
+    height: 40px;
+    background-color: rgb(92, 202, 253);
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    line-height: 40px;
+}
+
+#editar mat-icon{
+    color: #000;
+    position: relative;
+    top: 3px;
+    left: 10px;
+}
+
+#terminar{
+    margin-top: 20px;
+    width: 280px;
+    height: 40px;
+    background-color: rgb(93, 226, 81);
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    line-height: 40px;
+}
+
+#terminar mat-icon{
+    color: #000;
+    position: relative;
+    top: 3px;
+    left: 10px;
+}
+
+#nose{
+    background-color: black;
+    margin-top: 20px;
+    width: 280px;
+    height: 40px;
+    color: white;
+    border-radius: 20px;
+    border: none;
+}
+
+#descripcion{
+    border: outset 4px rgb(172, 172, 172);
+    width: 400px;
+    height: 200px;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content:center;
+    align-content: center;
+}
+
+#descripcion textarea{
+    font-size: 20px;
+    text-align: justify;
+    color: rgb(116, 116, 116);
+    width: inherit;
+    resize: none;
+    overflow-y: auto;
+}
+
+
+#descripcion textarea:disabled{
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+
+/* ---------------------------------- */
+
+#gallery{
+    border-radius: 5px;
+    width: 605px;
+    height: 605px;
+    padding-left: 3px;
+    padding-top: 2px;
+    background-color: black;
+    align-self: center;
+}
+
+#fotoss{
+    margin: 0px;
+    padding: 0px;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#fotoss li{
+    width: 195px;
+    height: 195px;
+    display: flex;
+    margin: 2px;
+}
+
+.imgg{
+    width: 192px;
+    height: 192px;
+    justify-self: center;
+}
+
+#fotoss li:hover{
+    background-color: rgb(27, 27, 27);
+    transform: scale(1.1);
+
+}
+
+.posicion{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+    border: solid 1px black;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-image: url("../../../assets/edit.jpg");
+    background-size: cover;
+    border: none;
+    width: 40px;
+    height: 40px;
+    top: 31px;
+    right: 13px;
+}
+
+.btn-file:hover {
+    transform: scale(1.1);
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+  }
+
+  #btnImgEdit{
+      border: solid 1px rgb(187, 187, 187);
+      background-color: rgb(202, 202, 202);
+      font-size: 40px;
+      font-weight: 200;
+      position: relative;
+      margin-top: 30px;
+      width: 40px;
+      height: 40px;
+      padding-bottom: 4px;
+      border-radius: 50%;
+  }
+
+#btnImgEdit:hover{
+    background-color: rgb(218, 218, 218);
+}
+
+#editimgsection{
+    display: flex;
+}
+
+#perfilRegular{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    line-height: 50px;
+    color: black;
+}
+
+#mensajeBienvenida{
+    padding: 50px;
+    margin-top: 160px;
+}
+
+#perfilRegular p{
+    padding: 10px;
+    line-height: 50px;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Outfit', sans-serif;
+    color: rgb(126, 126, 126);
+}
+
+#perfilRegular h2{
+    line-height: 50px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    color: rgb(126, 126, 126);
+}
+
+#perfilRegular span{
+    animation-name: changeFont;
+	animation-duration:2s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes changeFont{
+    0% {font-size: 40px;}
+    10% {font-size: 41px;}
+	20% {font-size: 42px;}
+    30% {font-size: 43px;}
+    40% {font-size: 44px;}
+    50% {font-size: 45px;}
+    60% {font-size: 44px;}
+    70% {font-size: 43px;}
+    80% {font-size: 42px;}
+    90% {font-size: 41px;}
+    100% {font-size: 40px;}
+}
+
+#rrss{
+    margin-top: 80px;
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    background-color: black;
+    height: 150px;
+    justify-content: center;
+    align-content: center;
+}
+
+#rrss li{
+    padding: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-self: center;
+}
+
+#rrss li img:hover{
+    transform: scale(0.9);
+}
+
+#usuarioNoExiste{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    line-height: 700px;
+    font-size: 30px;
+}
+
+

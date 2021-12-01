@@ -1,0 +1,25 @@
+<div id="contenedor">
+    <div id="cuadro">
+        <form id="formulario" [formGroup]="formulario" (ngSubmit)="validarLogin()">
+            <div id="items" class="row">
+                <div class="dInput col-8">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+                    <input type="text" class="form-control" id="username" formControlName="username" placeholder="Username">
+                </div>
+                <div class="dInput col-8">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">lock</mat-icon>
+                    <input type="password" class="form-control" id="password" formControlName="password" placeholder="Password">
+                </div>
+                <div id="chBox" class="col-8">
+                    <input class="form-check-input" type="checkbox" id="rememberMe"> 
+                    <label class="form-check-label">Remember me</label>
+                    <a class="font" href="#">Forgot the password?</a>
+                </div>
+                    <button type="submit" [disabled]="formulario.invalid">SIGN IN</button>
+                <div id="aBottom">
+                    <a class="font" href="register">Don't have an account? <span> Sign up</span></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>>
